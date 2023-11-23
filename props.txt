@@ -1,0 +1,57 @@
+
+1. **Crie o componente:**
+
+Dentro da pasta `src`, crie um novo arquivo chamado `MeuComponente.js`:
+
+```jsx
+// src/MeuComponente.js
+
+import React from 'react';
+
+const MeuComponente = (props) => {
+  return (
+    <div>
+      <p>Nome: {props.nome}</p>
+      <p>Idade: {props.idade}</p>
+    </div>
+  );
+};
+
+export default MeuComponente;
+```
+
+2. **Use o componente no `App.js`:**
+
+Agora, vamos usar o componente `MeuComponente` no `App.js`:
+
+```jsx
+// src/App.js
+
+import React from 'react';
+import './App.css';
+import MeuComponente from './MeuComponente';
+
+function App() {
+  return (
+    <div className="App">
+      <header className="App-header">
+        <h1>Meu Aplicativo React</h1>
+        <MeuComponente nome="João" idade={25} />
+      </header>
+    </div>
+  );
+}
+
+export default App;
+```
+
+3. **Resultado:**
+
+Ao salvar esses arquivos e iniciar o servidor (com `npm start`), o componente `MeuComponente` será renderizado com as propriedades fornecidas no `App.js`. Você verá algo como:
+
+```
+Meu Aplicativo React
+Nome: João
+Idade: 25
+```
+
