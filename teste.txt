@@ -1,0 +1,35 @@
+
+```javascript
+// src/utils/mensagem.js
+
+const obterMensagem = () => {
+  return "Olá! Esta é a mensagem da minha função.";
+};
+
+export default obterMensagem;
+```
+
+Agora, você precisa importar e usar essa função no `App.js`. Modifique o conteúdo do `src/App.js` conforme abaixo:
+
+```jsx
+// src/App.js
+
+import React from 'react';
+import './App.css';
+import obterMensagem from './utils/mensagem';
+
+function App() {
+  return (
+    <div className="App">
+      <header className="App-header">
+        <h1>{obterMensagem()}</h1>
+      </header>
+    </div>
+  );
+}
+
+export default App;
+```
+
+Agora, ao abrir http://localhost:3000/, a mensagem da função `obterMensagem` será exibida.
+
