@@ -1,0 +1,47 @@
+
+### Passo 1: Instalação do Create React App
+
+O `create-react-app` é uma ferramenta que facilita a inicialização de projetos React. Execute o seguinte comando no seu terminal para instalá-lo globalmente:
+
+```bash
+npm install -g create-react-app
+```
+
+### Passo 2: Criando um novo projeto React
+
+Agora, você pode criar um novo projeto React com o `create-react-app`. Execute o seguinte comando:
+
+```bash
+npx create-react-app meu-projeto-react
+```
+
+`meu-projeto-react` é o nome que você pode escolher para o seu projeto.
+
+### Passo 3: Navegando até o diretório do projeto
+
+```bash
+cd meu-projeto-react
+```
+
+### Passo 4: Rodando o projeto
+
+Agora, você pode iniciar o servidor de desenvolvimento:
+
+```bash
+npm start
+```
+
+Este comando irá iniciar o servidor de desenvolvimento e abrir o seu projeto React no navegador.
+
+### Passo 5: Visualizando o projeto React
+
+Ao executar `npm start`, você verá uma mensagem indicando em qual porta o seu aplicativo React está sendo executado (geralmente em [http://localhost:3000](http://localhost:3000/)). Abra seu navegador e vá para esse endereço para visualizar o seu aplicativo React.
+
+### Passo 6: Personalizando o projeto
+
+Você pode começar a personalizar seu projeto editando os arquivos no diretório `src`. O arquivo `src/App.js` é um bom ponto de partida.
+
+### Passo 7: Parando o servidor
+
+Quando terminar de trabalhar, você pode parar o servidor pressionando `Ctrl + C` no terminal.
+
