@@ -1,0 +1,34 @@
+Para modificar o código do arquivo `App.js` no projeto React e exibir o seu nome ao abrir http://localhost:3000/, siga os passos abaixo.
+
+1. Abra o arquivo `src/App.js` no seu editor de código.
+
+2. Modifique o conteúdo do componente `App` para exibir o seu nome. Por exemplo:
+
+```jsx
+import React from 'react';
+import './App.css';
+
+function App() {
+  return (
+    <div className="App">
+      <header className="App-header">
+        <h1>Meu Nome</h1>
+      </header>
+    </div>
+  );
+}
+
+export default App;
+```
+
+3. Salve o arquivo.
+
+4. Rode o projeto novamente usando:
+
+```bash
+npm start
+```
+
+5. Abra o navegador e vá para [http://localhost:3000/](http://localhost:3000/) para ver o seu nome sendo exibido.
+
+Lembre-se de que este é um exemplo simples. À medida que você avança no desenvolvimento React, você pode construir componentes mais complexos e interativos para suas aplicações.
