@@ -1,0 +1,79 @@
+Para adicionar roteamento entre telas no projeto React base, você precisará utilizar uma biblioteca de roteamento. Uma das bibliotecas mais comuns para isso é o `react-router-dom`. Vou mostrar como você pode adicioná-lo e criar um exemplo simples com roteamento. Certifique-se de ter a biblioteca instalada. Se não estiver, você pode instalá-la executando:
+
+```bash
+npm install react-router-dom
+```
+
+A seguir estão os passos para adicionar um componente com roteamento no seu projeto base:
+
+1. **Crie um novo componente:**
+
+Crie um novo componente que será renderizado quando a rota for alterada. Por exemplo, você pode criar um componente chamado `Pagina2.js`:
+
+```jsx
+// src/Pagina2.js
+
+import React from 'react';
+
+const Pagina2 = () => {
+  return (
+    <div>
+      <h2>Página 2</h2>
+      <p>Esta é a segunda página.</p>
+    </div>
+  );
+};
+
+export default Pagina2;
+```
+
+2. **Configure o roteamento:**
+
+Modifique o arquivo `src/App.js` para incluir o roteamento. Aqui está um exemplo básico:
+
+```jsx
+// src/App.js
+
+import React from 'react';
+import './App.css';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import Pagina2 from './Pagina2';
+
+function App() {
+  return (
+    <Router>
+      <div className="App">
+        <header className="App-header">
+          <h1>Meu Aplicativo React</h1>
+          <nav>
+            <ul>
+              <li>
+                <Link to="/">Página Inicial</Link>
+              </li>
+              <li>
+                <Link to="/pagina2">Página 2</Link>
+              </li>
+            </ul>
+          </nav>
+        </header>
+
+        <Route path="/" exact>
+          <p>Conteúdo da Página Inicial.</p>
+        </Route>
+
+        <Route path="/pagina2">
+          <Pagina2 />
+        </Route>
+      </div>
+    </Router>
+  );
+}
+
+export default App;
+```
+
+Este exemplo usa o `BrowserRouter` para envolver o conteúdo do aplicativo. Ele inclui links para duas rotas diferentes: a página inicial e a página 2. As rotas são definidas usando o componente `Route`, e o conteúdo é renderizado com base na rota atual.
+
+3. **Resultado:**
+
+Salve os arquivos e inicie o servidor (com `npm start`). Agora, você verá um menu de navegação e poderá alternar entre a página inicial e a página 2 usando os links. Este é um exemplo simples de como adicionar roteamento em um aplicativo React.
